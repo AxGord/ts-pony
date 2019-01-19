@@ -1,0 +1,8 @@
+{
+	"extends": "./tsconfig",
+	"compilerOptions": {
+		"outDir": "./tests/output",
+		"experimentalDecorators": true
+	},
+	"include": ["tests/node"]
+}

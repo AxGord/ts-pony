@@ -1,0 +1,30 @@
+{
+  "name": "ts-pony",
+  "version": "0.0.1",
+  "description": "TypeScript version of Haxe Pony library - https://github.com/AxGord/Pony",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "test": "tsc --build tsconfig.tests.json && node tests/output/tests/node/index.js",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxGord/ts-pony.git"
+  },
+  "author": "Alexander Gordeyko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AxGord/ts-pony/issues"
+  },
+  "homepage": "https://github.com/AxGord/ts-pony#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  },
+  "files": ["lib/**/*"]
+}

@@ -1,0 +1,19 @@
+{
+	"extends": ["tslint:recommended"],
+	"rules": {
+		"indent": [true, "tabs", 4],
+		"curly": false,
+		"triple-equals": false,
+		"eofline": false,
+		"member-ordering": [true, {"order": [
+			"static-field",
+			"instance-field",
+			"public-constructor",
+			"instance-method",
+			"static-method"
+		]}],
+		"no-empty": [true, "allow-empty-functions"],
+		"quotemark": [true, "single"],
+		"variable-name": [true, "allow-leading-underscore"]
+	}
+}
