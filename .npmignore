@@ -1,6 +1,7 @@
 src
 tests
-img
+doc
+doc_source
 tsconfig.json
 tsconfig.tests.json
 tslint.json

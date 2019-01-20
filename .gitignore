@@ -1,6 +1,15 @@
 node_modules
-/lib
+/decor
+/ds
+/events
+/model
+/testengine
+/time
+/utils
 /tests/output
+/Init.d.ts
+/Init.js
+/doc
 
 # OS generated files #
 ######################

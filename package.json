@@ -1,15 +1,19 @@
 {
   "name": "ts-pony",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeScript version of Haxe Pony library - https://github.com/AxGord/Pony",
-  "main": "index.js",
+  "main": "Init.js",
+  "types": "Init.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf decor events ds model testengine time utils && tsc",
     "lint": "tslint -p tsconfig.json",
     "test": "tsc --build tsconfig.tests.json && node tests/output/tests/node/index.js",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "builddoc": "typedoc --out doc/ src/ --mode modules --excludePrivate --name ts-pony --hideGenerator --readme doc_sources/readme.md",
+    "docimg": "cp doc_sources/twilight.svg doc_sources/simpledependencymap.jpg doc_sources/fulldependencymap.jpg doc/",
+    "doc": "rimraf doc && npm run builddoc && tsviz src/ doc/diagram.png -r && npm run docimg"
   },
   "repository": {
     "type": "git",
@@ -26,5 +30,15 @@
     "tslint": "^5.12.1",
     "typescript": "^3.2.4"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "decor/**/*",
+    "ds/**/*",
+    "events/**/*",
+    "model/**/*",
+    "testengine/**/*",
+    "time/**/*",
+    "utils/**/*",
+    "Init.d.ts",
+    "Init.js"
+  ]
 }
