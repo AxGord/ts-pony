@@ -3,3 +3,5 @@ node_js: "11.7"
 before_install: npm i -g rimraf
 install: npm i
 script: npm test
+after_success:
+  - bash ghp-updater.sh

@@ -5,3 +5,5 @@ doc_source
 tsconfig.json
 tsconfig.tests.json
 tslint.json
+.travis.yml
+ghp-updater.sh
