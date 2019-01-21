@@ -3,6 +3,7 @@ node_js: "11.7"
 before_install:
   - npm i -g rimraf
   - npm i -g typedoc
+  - npm i -g tsviz
 install: npm i
 script: npm test
 after_success:
