@@ -36,7 +36,7 @@ git fetch origin
 git config user.name "rapporter-travis"
 git config user.email "travis"
 git checkout gh-pages
-cp -r ../ts-pony/doc .
+rsync -r ../ts-pony/doc/ .
 
 git add -A
 git commit -m "GH-Pages update by travis after $TRAVIS_COMMIT"
