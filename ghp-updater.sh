@@ -12,7 +12,9 @@ git config user.name "rapporter-travis"
 git config user.email "travis"
 git checkout gh-pages
 
+cd ..
 npm run doc
+cd doc
 
 git add .
 git commit -m "GH-Pages update by travis after $TRAVIS_COMMIT"
