@@ -17,7 +17,7 @@ npm run doc
 cd doc
 
 git remote update
-git fetch 
+git fetch origin
 git checkout --track origin/gh-pages
 git add -A
 git commit -m "GH-Pages update by travis after $TRAVIS_COMMIT"
